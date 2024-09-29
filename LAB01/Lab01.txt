@@ -1,0 +1,7 @@
+1.
+Chọn "CANCEL" đồng nghĩa với việc chọn “No”
+2.
+Để tùy chỉnh các lựa chọn có thể sử dụng JOptionPane.showOptionDialog
+      
+        
+ 
