@@ -22,17 +22,17 @@ public class Book extends Media {
 	public void addAuthor(String authorName) {
 		if (!authors.contains(authorName)) {
 			authors.add(authorName);
-			System.out.println(authorName + "has been add.");	
+			System.out.println(authorName + " has been add.");	
 		} else {
-			System.out.println(authorName + "is already in the authors list.");
+			System.out.println(authorName + " is already in the authors list.");
 		}
 	}
 	public void removeAuthor(String authorName) {
 		if (authors.contains(authorName)) {
 			authors.remove(authorName);
-			System.out.println(authorName+ "has been removed.");
+			System.out.println(authorName+ " has been removed.");
 		} else {
-			System.out.println(authorName + "is not in the authors list.");
+			System.out.println(authorName + " is not in the authors list.");
 		}
 	}
 }
