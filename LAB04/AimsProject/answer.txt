@@ -1,0 +1,22 @@
+Phần 9:
+1. Xác định các lớp nào là tập hợp (aggregates) của các lớp khác? 
+- Cart là tập hợp của Media 
+- CompactDisc là tập hợp của Track 
+
+Phần 10:
+
+- Nếu đối tượng truyền vào không phải là thể hiện của lớp Media, khi gọi phương thức equals() trong lớp Media, bạn cần kiểm tra kiểu của đối tượng đó trước khi thực hiện so sánh. Cụ thể trong phương thức equals(), bạn có thể sử dụng instanceof để kiểm tra xem đối tượng truyền vào có phải là một thể hiện của lớp Media hay không. Nếu không, phương thức sẽ trả về false, vì hai đối tượng không thể so sánh được nếu chúng không phải cùng kiểu. 
+
+Phần 12:
+1. Lớp nào nên implement interface Comparable?
+Interface Comparable nên được implement trong các lớp cần sắp xếp theo một quy tắc mặc định, ví dụ như lớp Media và các lớp con của nó như Book, CompactDisc, DigitalVideoDisc. Điều này giúp các đối tượng của các lớp này có thể được so sánh và sắp xếp trong các cấu trúc dữ liệu như TreeSet hoặc khi sử dụng Collections.sort().
+
+2. Cách cài đặt phương thức compareTo() trong các lớp?
+Phương thức compareTo() yêu cầu bạn định nghĩa cách so sánh đối tượng hiện tại với đối tượng khác. Ví dụ, trong lớp Media, có thể so sánh các đối tượng theo tiêu đề hoặc giá. Cách so sánh này phải đảm bảo thứ tự nhất quán và hợp lý.
+
+3. Có thể có hai quy tắc sắp xếp của các mục (theo tiêu đề rồi đến giá và theo giá rồi đến tiêu đề) nếu sử dụng Comparable không?
+Không, trong một phương thức compareTo() duy nhất, bạn chỉ có thể thực hiện một quy tắc sắp xếp. Nếu bạn cần sử dụng nhiều quy tắc sắp xếp khác nhau (ví dụ: theo tiêu đề rồi đến giá và theo giá rồi đến tiêu đề), bạn nên sử dụng Comparator thay vì Comparable.
+
+
+4. DVD có một quy tắc sắp xếp khác biệt so với các loại media khác, tức là theo tiêu đề, sau đó là chiều dài giảm dần, rồi đến giá. Làm thế nào để thay đổi mã nguồn để hỗ trợ điều này?
+Để DVD có một quy tắc sắp xếp khác biệt, bạn cần override phương thức compareTo() trong lớp DigitalVideoDisc để thực hiện quy tắc sắp xếp riêng cho DVD. Trong trường hợp này, sắp xếp sẽ theo thứ tự: tiêu đề -> chiều dài giảm dần -> giá.
