@@ -7,9 +7,10 @@ public class Book extends Media {
 	
 	private List<String> authors = new ArrayList<String>();
 	
-	public Book() {
-		super(0, "Unknown Title", "Unknown Category", 0.0f);
+	public Book(int id, String title, String category, float cost) {
+	    super(id, title, category, cost);
 	}
+
 	
 	public List<String> getAuthors() {
         return authors;
@@ -35,4 +36,7 @@ public class Book extends Media {
 			System.out.println(authorName + " is not in the authors list.");
 		}
 	}
+	public String toString() {
+        return "Book - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getAuthors() + " min: " + this.getCost() + " $";
+    }
 }

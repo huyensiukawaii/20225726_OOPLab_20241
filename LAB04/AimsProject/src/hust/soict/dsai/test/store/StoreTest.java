@@ -13,24 +13,11 @@ public class StoreTest {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);
 
         // Add DVDs to the store
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
+        store.addMedia(dvd1);
+        store.addMedia(dvd2);
+        store.addMedia(dvd3);
 
-        // Display store items
-        store.displayStore();
 
-        // Remove a DVD
-        store.removeDVD(dvd2);
-
-        // Display store items after removal
-        store.displayStore();
-
-        // Attempt to remove a DVD that does not exist
-        DigitalVideoDisc dvd4 = new DigitalVideoDisc("Frozen");
-        store.removeDVD(dvd4);
-
-        // Display store items after trying to remove non-existing DVD
-        store.displayStore();
+   
     }
 }
